@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("./assets/background.webp");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            text-align: center;
+            padding: 5px;
+        }
+        canvas {
+            width: 40%;
+            height: 40%;
+        }
+        video{
+            width: 40%;
+            height: 40%;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: darkorchid;">ĐỒ HỌA ỨNG DỤNG</h1>
+    <h3>BTVN T7,8 Web Graphic Programming</h3>
+    <h3>Video Edge Detection</h3>
+    <div>
+        <!-- Thanh trượt threshold -->
+        <p>threshold:</p>
+        <input type="range" min="0" max="255" id="threshold">
+        <!-- bảng lựa chọn phương pháp lọc biên cạnh -->
+        <p>edge detection method:</p>
+        <select name="methods" id="methods">
+            <option selected value="0">Sobel</option>
+            <option value="1">Prewitt</option>
+            <option value="2">Frei-Chen</option>
+        </select>
+    </div>
+    <!-- thẻ video gốc -->
+    <video src="./assets/bee.mp4" controls loop></video>
+    <!-- thẻ canvas hiển thị video biên cạnh -->
+    <canvas></canvas>
+    <h4>19120456 - Nguyễn Phan Quốc Bảo</h4>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
